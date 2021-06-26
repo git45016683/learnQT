@@ -4,11 +4,13 @@ int main(int argc, char* argv[])
 {
     QApplication a(argc, argv);
     // 新建qwidget对象，默认parent参数为0，所以它是个窗口
-    QWidget* widget = new QWidget();
+//    QWidget* widget = new QWidget(0,Qt::Dialog);  // dialog样式窗口
+    QWidget* widget = new QWidget(0,Qt::Dialog | Qt::FramelessWindowHint);  // 无边框样式
     // 设置窗口标题
     widget->setWindowTitle(QObject::tr("我是learnQT from icemaple"));
     // 新建QLabel对象，默认parent参数为0，所以它是个独立窗口
-    QLabel* label = new QLabel();
+//    QLabel* label = new QLabel(0,Qt::SplashScreen);  // 欢迎窗口样式
+    QLabel* label = new QLabel(0,Qt::SplashScreen | Qt::WindowStaysOnTopHint);  // 欢迎窗口，总是置顶
     // 设置QLabel Title的内容
     label->setWindowTitle(QObject::tr("我是Label Title，Hello Word~"));
     // 设置QLabel要显示的内容
