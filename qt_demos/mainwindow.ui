@@ -53,6 +53,19 @@
      <string>showChild</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="autoBindBtn">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>150</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>autoBindSowDlg</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

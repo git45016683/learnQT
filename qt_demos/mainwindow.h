@@ -17,6 +17,8 @@ public:
 
 public slots:
     void showChildDialog();
+//    void showDlg();
+    void on_autoBindBtn_clicked();
 
 private slots:
     void on_pushButton_clicked();
