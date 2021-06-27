@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include "qmythread1.h"
+#include "mythreadfromqobject.h"
 
 #include <QMainWindow>
 
@@ -29,11 +30,25 @@ public slots:
     void on_threadExit_clicked();
     void on_threadQuit_clicked();
 
+// 线程示例槽函数--fromQObject
+    void startThread2();
+    void deleteThread2();
+    void terminateThread2();
+    void on_threadBigWork1_clicked();
+    void on_threadBigWork2_clicked();
+    void receiveMessage2(const QString& str);
+
+signals:
+    void startObjThreadWork1();
+    void startObjThreadWork2();
+
 private slots:
     void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;
     MyThreadFromQThread* thread1;
+    MyThreadFromQObject* thread2;
+    QThread* m_objThread;
 };
 #endif // MAINWINDOW_H

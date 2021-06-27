@@ -18,11 +18,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    qmythread1.cpp
+    qmythread1.cpp \
+    mythreadfromqobject.cpp
 
 HEADERS += \
     mainwindow.h \
-    qmythread1.h
+    qmythread1.h \
+    mythreadfromqobject.h
 
 FORMS += \
     mainwindow.ui
